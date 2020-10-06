@@ -1,6 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
+import { Glass, ShortcutIcon } from "component";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -11,18 +12,22 @@ const useStyles = makeStyles((theme) => ({
   header: {
     border: "1px solid",
     padding: 10,
-    height: "10%",
+    height: "8%",
     width: "100%",
   },
   container: {
-    border: "1px solid",
     padding: 10,
     height: "80%",
+    alignContent: "start",
   },
   footer: {
-    border: "1px solid",
     padding: 10,
-    height: "10%",
+    height: "12%",
+  },
+  shortcutContainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 }));
 
@@ -33,11 +38,35 @@ function XSLayout(props) {
       <Grid container className={classes.header}>
         <Grid item>header</Grid>
       </Grid>
-      <Grid container className={classes.container}>
-        <Grid item>xs</Grid>
+      <Grid container className={classes.container} spacing={2}>
+        <Grid item xs={12} sm={12} md={12}>
+          <div style={{ display: "flex", flexWrap: "wrap" }}>
+            <ShortcutIcon />
+            <ShortcutIcon />
+            <ShortcutIcon />
+            <ShortcutIcon />
+            <ShortcutIcon />
+            <ShortcutIcon />
+            <ShortcutIcon />
+            <ShortcutIcon />
+          </div>
+        </Grid>
       </Grid>
-      <Grid container className={classes.footer}>
-        <Grid item>xs</Grid>
+      <Grid
+        container
+        alignItems='center'
+        justify='center'
+        className={classes.footer}
+      >
+        <Grid item xs={12} sm={12} md={12}>
+          <Glass>
+            <div className={classes.shortcutContainer}>
+              <ShortcutIcon />
+              <ShortcutIcon />
+              <ShortcutIcon />
+            </div>
+          </Glass>
+        </Grid>
       </Grid>
     </div>
   );

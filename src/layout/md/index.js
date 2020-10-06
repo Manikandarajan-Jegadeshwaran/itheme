@@ -1,6 +1,8 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
+import { Glass, ShortcutIcon } from "component";
+import { Clock } from "component/widgets";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,26 +15,30 @@ const useStyles = makeStyles((theme) => ({
   header: {
     border: "1px solid",
     padding: 10,
-    height: "10%",
+    height: 100,
     width: "100%",
   },
   leftPane: {
-    border: "1px solid",
     padding: 10,
-    height: "80%",
+    height: "calc(100% - 220px)",
     width: "35%",
+    alignContent: "start",
   },
   container: {
-    border: "1px solid",
     padding: 10,
-    height: "80%",
-    width: "65%",
+    height: "calc(100% - 220px)",
+    width: "67%",
+    alignContent: "start",
   },
   footer: {
-    border: "1px solid",
     padding: 10,
-    height: "10%",
+    height: 120,
     width: "100%",
+  },
+  shortcutContainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 }));
 
@@ -43,14 +49,50 @@ function MDLayout(props) {
       <Grid container className={classes.header}>
         <Grid item>header</Grid>
       </Grid>
-      <Grid container className={classes.leftPane}>
-        <Grid item>left</Grid>
+      <Grid container className={classes.leftPane} spacing={2}>
+        <Grid item xs={12} sm={12} md={12}>
+          <Glass>
+            <Clock />
+          </Glass>
+        </Grid>
+        <Grid item xs={12} sm={12} md={12}>
+          <Glass>
+            <Clock />
+          </Glass>
+        </Grid>
+        <Grid item xs={12} sm={12} md={12}>
+          <Glass>
+            <Clock />
+          </Glass>
+        </Grid>
       </Grid>
-      <Grid container className={classes.container}>
-        <Grid item>md</Grid>
+      <Grid container className={classes.container} spacing={2}>
+        <Grid item xs={12} sm={12} md={12}>
+          <Glass>
+            <Clock />
+          </Glass>
+        </Grid>
+        <Grid item xs={12} sm={12} md={12}>
+          <Glass>
+            <Clock />
+          </Glass>
+        </Grid>
       </Grid>
-      <Grid container className={classes.footer}>
-        <Grid item>xs</Grid>
+      <Grid
+        container
+        alignItems='center'
+        justify='center'
+        className={classes.footer}
+      >
+        <Grid item xs={10} sm={10} md={10}>
+          <Glass>
+            <div className={classes.shortcutContainer}>
+              <ShortcutIcon />
+              <ShortcutIcon />
+              <ShortcutIcon />
+            </div>
+          </Glass>
+        </Grid>
       </Grid>
     </div>
   );
