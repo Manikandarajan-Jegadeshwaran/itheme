@@ -15,24 +15,24 @@ const useStyles = makeStyles((theme) => ({
   header: {
     border: "1px solid",
     padding: 10,
-    height: 100,
+    height: 70,
     width: "100%",
+  },
+  container: {
+    height: "calc(100% - 140px)",
+    overflow: "auto",
   },
   leftPane: {
     padding: 10,
-    height: "calc(100% - 220px)",
-    width: "35%",
     alignContent: "start",
   },
-  container: {
+  rightPane: {
     padding: 10,
-    height: "calc(100% - 220px)",
-    width: "67%",
     alignContent: "start",
   },
   footer: {
     padding: 10,
-    height: 120,
+    height: 70,
     width: "100%",
   },
   shortcutContainer: {
@@ -49,35 +49,74 @@ function MDLayout(props) {
       <Grid container className={classes.header}>
         <Grid item>header</Grid>
       </Grid>
-      <Grid container className={classes.leftPane} spacing={2}>
-        <Grid item xs={12} sm={12} md={12}>
-          <Glass>
-            <Clock />
-          </Glass>
+      <Grid container className={classes.container}>
+        <Grid
+          item
+          container
+          xs={4}
+          sm={4}
+          md={4}
+          className={classes.leftPane}
+          spacing={1}
+        >
+          <Grid item xs={12} sm={12} md={12}>
+            <Glass>
+              <Clock />
+            </Glass>
+          </Grid>
+          <Grid item xs={12} sm={12} md={12}>
+            <Glass>
+              <Clock />
+            </Glass>
+          </Grid>
+          <Grid item xs={12} sm={12} md={12}>
+            <Glass>
+              <Clock />
+            </Glass>
+          </Grid>
         </Grid>
-        <Grid item xs={12} sm={12} md={12}>
-          <Glass>
-            <Clock />
-          </Glass>
-        </Grid>
-        <Grid item xs={12} sm={12} md={12}>
-          <Glass>
-            <Clock />
-          </Glass>
+        <Grid
+          item
+          container
+          xs={4}
+          sm={4}
+          md={4}
+          className={classes.rightPane}
+          spacing={1}
+        >
+          <Grid item xs={12} sm={12} md={12}>
+            <Glass>
+              <Clock />
+            </Glass>
+          </Grid>
+          <Grid item xs={12} sm={12} md={12}>
+            <Glass>
+              <Clock />
+            </Glass>
+          </Grid>
+          <Grid item xs={12} sm={12} md={12}>
+            <Glass>
+              <Clock />
+            </Glass>
+          </Grid>
+          <Grid item xs={12} sm={12} md={12}>
+            <Glass>
+              <Clock />
+            </Glass>
+          </Grid>
+          <Grid item xs={12} sm={12} md={12}>
+            <Glass>
+              <Clock />
+            </Glass>
+          </Grid>
+          <Grid item xs={12} sm={12} md={12}>
+            <Glass>
+              <Clock />
+            </Glass>
+          </Grid>
         </Grid>
       </Grid>
-      <Grid container className={classes.container} spacing={2}>
-        <Grid item xs={12} sm={12} md={12}>
-          <Glass>
-            <Clock />
-          </Glass>
-        </Grid>
-        <Grid item xs={12} sm={12} md={12}>
-          <Glass>
-            <Clock />
-          </Glass>
-        </Grid>
-      </Grid>
+
       <Grid
         container
         alignItems='center'
@@ -85,7 +124,7 @@ function MDLayout(props) {
         className={classes.footer}
       >
         <Grid item xs={10} sm={10} md={10}>
-          <Glass>
+          <Glass dense>
             <div className={classes.shortcutContainer}>
               <ShortcutIcon />
               <ShortcutIcon />

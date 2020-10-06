@@ -5,7 +5,7 @@ import AcUnitIcon from "@material-ui/icons/AcUnit";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 30,
-    padding: 15,
+    padding: 7,
     background: "#fff",
     borderRadius: 15,
     fontSize: "1rem",
@@ -14,9 +14,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     height: 30,
-    "& svg": {
-      fontSize: "2rem",
-    },
   },
 }));
 

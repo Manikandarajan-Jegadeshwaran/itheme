@@ -11,18 +11,18 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     border: "1px solid",
-    padding: 10,
-    height: "8%",
+    height: 70,
     width: "100%",
   },
   container: {
     padding: 10,
-    height: "80%",
+    height: "calc(100% - 140px)",
     alignContent: "start",
+    width: "100%",
   },
   footer: {
     padding: 10,
-    height: "12%",
+    height: 70,
   },
   shortcutContainer: {
     display: "flex",
@@ -38,7 +38,7 @@ function XSLayout(props) {
       <Grid container className={classes.header}>
         <Grid item>header</Grid>
       </Grid>
-      <Grid container className={classes.container} spacing={2}>
+      <Grid container className={classes.container}>
         <Grid item xs={12} sm={12} md={12}>
           <div style={{ display: "flex", flexWrap: "wrap" }}>
             <ShortcutIcon />
@@ -59,7 +59,7 @@ function XSLayout(props) {
         className={classes.footer}
       >
         <Grid item xs={12} sm={12} md={12}>
-          <Glass>
+          <Glass dense>
             <div className={classes.shortcutContainer}>
               <ShortcutIcon />
               <ShortcutIcon />

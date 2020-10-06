@@ -37,16 +37,14 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
   },
   time: {
-    fontSize: "3rem",
+    fontSize: "2rem",
     fontWeight: "500",
   },
   meridian: {
     paddingLeft: 5,
-    fontSize: "1.2rem",
     fontWeight: "500",
   },
   date: {
-    fontSize: "1.3rem",
     fontWeight: "500",
   },
 }));

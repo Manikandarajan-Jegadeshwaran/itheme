@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
     background: "#ffffff80",
     backdropFilter: "saturate(180%) blur(20px)",
     borderRadius: 15,
-    padding: 5,
+    padding: (props) => (props?.dense ? 0 : 5),
     width: (props) => props?.fullWidth && "100%",
   },
 }));

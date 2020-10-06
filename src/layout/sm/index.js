@@ -13,17 +13,17 @@ const useStyles = makeStyles((theme) => ({
   header: {
     border: "1px solid",
     padding: 10,
-    height: 80,
+    height: 70,
     width: "100%",
   },
   container: {
     padding: 10,
-    height: "calc(100% - 180px)",
+    height: "calc(100% - 140px)",
     alignContent: "start",
   },
   footer: {
     padding: 10,
-    height: 100,
+    height: 70,
   },
   shortcutContainer: {
     display: "flex",
@@ -39,7 +39,7 @@ function SMLayout(props) {
       <Grid container className={classes.header}>
         <Grid item>header</Grid>
       </Grid>
-      <Grid container className={classes.container} spacing={2}>
+      <Grid container className={classes.container}>
         <Grid item xs={12} sm={12} md={12}>
           <Glass>
             <Clock />
@@ -62,7 +62,7 @@ function SMLayout(props) {
         className={classes.footer}
       >
         <Grid item xs={10} sm={10} md={10}>
-          <Glass>
+          <Glass dense>
             <div className={classes.shortcutContainer}>
               <ShortcutIcon />
               <ShortcutIcon />
