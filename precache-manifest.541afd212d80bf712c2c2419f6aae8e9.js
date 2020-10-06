@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "866806ed5b8fe342dbb062513d7d7b8b",
+    "revision": "c4c9724aa95043bdf011986033cc73ea",
     "url": "/itheme/index.html"
   },
   {
-    "revision": "d4cceff3506001a3d676",
-    "url": "/itheme/static/css/main.5f361e03.chunk.css"
+    "revision": "5476d9ce7e82ce46c300",
+    "url": "/itheme/static/css/main.9b9c23d9.chunk.css"
   },
   {
     "revision": "4dc2f3f956c89b7a4b72",
@@ -16,12 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/itheme/static/js/2.cd01045c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d4cceff3506001a3d676",
+    "revision": "5476d9ce7e82ce46c300",
     "url": "/itheme/static/js/main.d5cd5bfd.chunk.js"
   },
   {
     "revision": "3969ed1f5432fc5a7ac8",
     "url": "/itheme/static/js/runtime-main.0e49d0bd.js"
+  },
+  {
+    "revision": "9c630eff1f4288c05cbaa0c26d5eff8f",
+    "url": "/itheme/static/media/ipad-bg.9c630eff.png"
   },
   {
     "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
