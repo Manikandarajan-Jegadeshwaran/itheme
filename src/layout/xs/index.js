@@ -2,6 +2,7 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import { Glass, ShortcutIcon } from "component";
+import Header from "../header";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -10,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
     margin: 0,
   },
   header: {
-    border: "1px solid",
     height: 70,
     width: "100%",
   },
@@ -36,7 +36,9 @@ function XSLayout(props) {
   return (
     <div className={classes.root}>
       <Grid container className={classes.header}>
-        <Grid item>header</Grid>
+        <Grid item xs={12} sm={12} md={12}>
+          <Header />
+        </Grid>
       </Grid>
       <Grid container className={classes.container}>
         <Grid item xs={12} sm={12} md={12}>

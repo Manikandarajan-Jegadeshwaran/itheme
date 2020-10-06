@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import { Glass, ShortcutIcon } from "component";
 import { Clock } from "component/widgets";
+import Header from "../header";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -11,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
     margin: 0,
   },
   header: {
-    border: "1px solid",
     padding: 10,
     height: 70,
     width: "100%",
@@ -37,7 +37,9 @@ function SMLayout(props) {
   return (
     <div className={classes.root}>
       <Grid container className={classes.header}>
-        <Grid item>header</Grid>
+        <Grid item>
+          <Header />
+        </Grid>
       </Grid>
       <Grid container className={classes.container}>
         <Grid item xs={12} sm={12} md={12}>
