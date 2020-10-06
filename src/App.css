@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background: url(./asset/bg/ipad-bg.png);
+  background-size: cover;
 }
 
 .App-logo {
